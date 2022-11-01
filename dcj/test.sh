@@ -1,0 +1,2 @@
+# td-hm_res50_8xb64-210e_coco-256x192
+NNODES=1 NODE_RANK=0 PORT=29601 MASTER_ADDR="127.0.0.1" CUDA_VISIBLE_DEVICES=0,1,2,3 bash ./tools/dist_test.sh configs/body_2d_keypoint/topdown_heatmap/coco/td-hm_res50_8xb64-210e_coco-256x192.py https://download.openmmlab.com/mmpose/top_down/resnet/res50_coco_256x192-ec54d7f3_20200709.pth 4 --out test_dirs/td-hm_res50_8xb64-210e_coco-256x192.json --cfg-options val_dataloader.batch_size=1 val_dataloader.num_workers=2
